@@ -1,19 +1,16 @@
-
-const expres = require('express');
+const express = require('express');
 const bodyParser = require('body-parser');
 const webpush = require('web-push');
 const path = require('path');
 
-const app = expres();
-
-
+const app = express();
 
 
 //middlewares
 //body parser
 app.use(bodyParser.json());
-//set static payh
-app.use(expres.static(path.join(__dirname,"client")));
+//set static path
+app.use(express.static(path.join(__dirname, "client")));
 
 
 //VAPIED keys
